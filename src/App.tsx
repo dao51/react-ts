@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Hello from './components/Hello'
+// import Hello from './components/Hello'
+import LikeButton from './components/LikeButton'
 
 const App: React.FC = () => { // 也可使用箭头函数
   return (
@@ -11,7 +12,8 @@ const App: React.FC = () => { // 也可使用箭头函数
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Hello message='dao51'/>
+        {/* <Hello message='dao51'/> */}
+        <LikeButton/>
         <a
           className="App-link"
           href="https://reactjs.org"
