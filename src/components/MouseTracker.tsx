@@ -19,7 +19,7 @@ const MouseTracker: React.FC = () => {
             // 移除点击事件
             document.removeEventListener('click', updateMouse)
         }
-    })
+    }, [])  // 只运行一次，不重复执行
 
     console.log('渲染dom前', positions.x)
     // 返回dom

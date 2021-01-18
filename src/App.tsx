@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import Hello from './components/Hello'
@@ -6,6 +6,7 @@ import LikeButton from './components/LikeButton'
 import MouseTracker from './components/MouseTracker'
 
 const App: React.FC = () => { // 也可使用箭头函数
+  const [show, setShow] = useState(true)
   return (
     <div className="App">
       <header className="App-header">
@@ -14,8 +15,9 @@ const App: React.FC = () => { // 也可使用箭头函数
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         {/* <Hello message='dao51'/> */}
+        <button onClick={() => {setShow(!show)}}>Toggle</button>
         <LikeButton/>
-        <MouseTracker/>
+        { show && <MouseTracker/>}
         <a
           className="App-link"
           href="https://reactjs.org"
