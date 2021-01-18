@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 // import Hello from './components/Hello'
 import LikeButton from './components/LikeButton'
+import MouseTracker from './components/MouseTracker'
 
 const App: React.FC = () => { // 也可使用箭头函数
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => { // 也可使用箭头函数
         </p>
         {/* <Hello message='dao51'/> */}
         <LikeButton/>
+        <MouseTracker/>
         <a
           className="App-link"
           href="https://reactjs.org"
