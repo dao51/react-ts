@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import Hello from './components/Hello'
@@ -12,6 +12,23 @@ interface IShowResult {
   status: string
 }
 
+interface IThemeProps {
+  [key: string]: {color: string; background: string;}
+}
+
+const themes: IThemeProps = {
+  'light': {
+    color: '#000',
+    background: '#eee'
+  },
+  'dark': {
+    color: '#fff',
+    background: '#222'
+  }
+}
+
+export const Themecontext = React.createContext(themes.dark)
+
 const App: React.FC = () => { // 也可使用箭头函数
   // const [show, setShow] = useState(true)
   const positions = useMousePosition()
@@ -19,6 +36,8 @@ const App: React.FC = () => { // 也可使用箭头函数
   const dogResult = data as IShowResult
   return (
     <div className="App">
+      
+      <Themecontext.Provider value={themes.dark}/> {/* 更改主题 */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         { loading ? <p>🐶读取中...</p> : <img src={dogResult && dogResult.message} /> }
