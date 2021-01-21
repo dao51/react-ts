@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
-import { Themecontext } from '../App'
+// import { Themecontext } from '../App'
 // import useMousePosition from '../hooks/useMousePosition'
 
 const LikeButton: React.FC = () => {
@@ -9,13 +9,13 @@ const LikeButton: React.FC = () => {
     const likeRef = useRef(0)  // 设置useRef初始值
     const didMountRef = useRef(false)
     const domRef = useRef<HTMLInputElement>(null)
-    const theme = useContext(Themecontext)
+    // const theme = useContext(Themecontext)
 
-    console.log('主题', theme)
-    const style = {
-        color: theme.color,
-        background: theme.background
-    }
+    // console.log('主题', theme)
+    // const style = {
+    //     color: theme.color,
+    //     background: theme.background
+    // }
 
     useEffect(() => { // useEffect 在首次及之后每次渲染后自动调用
         document.title = `点击了${like}次`
@@ -46,7 +46,7 @@ const LikeButton: React.FC = () => {
         <>
             <input type="text" ref={domRef} />
             {/* <h2>x:{positions.x},y:{positions.y}</h2> */}
-            <button style={style} onClick={() => {setLike(like + 1); likeRef.current++}}>
+            <button onClick={() => {setLike(like + 1); likeRef.current++}}>
                 {like}👍
             </button>
             <button onClick={handleAlertClick}>Alert!</button>
