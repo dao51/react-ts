@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Button, { ButtonType, ButtonSize } from './components/Button/button';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,9 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
+        <Button disabled>禁用按钮</Button>
+        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Hello</Button>
+        <Button btnType={ButtonType.Link} href="https://www.baidu.com">百度</Button>
       </header>
     </div>
   );
