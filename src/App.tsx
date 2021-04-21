@@ -16,11 +16,11 @@ const App: React.FC = () => {
           Learn React
         </a>
         <p>
-        <Button btnType={ButtonType.Default}>默认按钮</Button>
+        <Button className="test" onClick={(e) => {e.preventDefault(); alert(1)}}>默认按钮</Button>
         <Button disabled>禁用按钮</Button>
         <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Hello</Button>
         <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>小号按钮</Button>
-        <Button btnType={ButtonType.Link} href="https://www.baidu.com">百度</Button>
+        <Button btnType={ButtonType.Link} href="https://www.baidu.com" target="_blank">百度</Button>
         <Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>禁用链接</Button>
         </p>
       </header>
