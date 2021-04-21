@@ -4,5 +4,8 @@
 //layout
 @import "reboot";
 
+// mixin 复用样式
+@import "mixin";
+
 // Button组件
 @import "../components/Button/style";
