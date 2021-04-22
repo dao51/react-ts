@@ -25,8 +25,8 @@ interface BaseButtonProps {
 
 type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement> // React.ButtonHTMLAttributes获取按钮基本属性
 type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>
-export type Buttonprops = Partial<NativeButtonProps & AnchorButtonProps>  // 交叉类型  Partial设置属性为可选
-const Button: React.FC<Buttonprops> = (props) => {
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>  // 交叉类型  Partial设置属性为可选
+const Button: React.FC<ButtonProps> = (props) => {
     const {
         disabled,
         className,
